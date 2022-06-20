@@ -10635,6 +10635,13 @@ react-side-effect@^2.1.0:
   resolved "https://registry.npmjs.org/react-side-effect/-/react-side-effect-2.1.1.tgz"
   integrity sha512-2FoTQzRNTncBVtnzxFOk2mCpcfxQpenBMbk5kSVBg5UcPqV9fRbgY2zhb7GTWWOlpFmAxhClBDlIq8Rsubz1yQ==
 
+react-smooth-image@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/react-smooth-image/-/react-smooth-image-1.1.0.tgz#81d6c8087447a04724cf8922331f4ab0c98a82e9"
+  integrity sha512-eAbsUr554PbQq3Z/DG2t4tnlPf7cEEiSR2o1L3fuKloLey0uZRk8/Ta41xX3b07yW0T1PDW/+FWO6Ns/v1TJvQ==
+  dependencies:
+    prop-types "^15.6.2"
+
 react-style-singleton@^2.2.1:
   version "2.2.1"
   resolved "https://registry.npmjs.org/react-style-singleton/-/react-style-singleton-2.2.1.tgz"

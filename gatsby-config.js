@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: "/ParkAward.github.io",
+  pathPrefix: "/",
   siteMetadata: {
     title: `Root:p`,
     author: {

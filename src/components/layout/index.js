@@ -1,33 +1,30 @@
-import React, {useState, useEffect} from "react"
+import React from "react"
 import Header from "./Header"
 import Footer from "./Footer"
-import { Center, Image, Fade } from "@chakra-ui/react"
-import { StaticImage } from "gatsby-plugin-image"
+import { Center} from "@chakra-ui/react"
+import SmoothImage from 'react-smooth-image';
+
+const bgStyled = {position:'fixed',
+  top:'5%',
+  height:"95vh",
+  width:"100vw",
+  zIndex:-1}
 
 const Layout = ({ location, title, bgImg, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
-  const [bgImage, setBgImage] = useState(undefined);
-
-  useEffect(()=>{
-    setBgImage(bgImg);
-  },[bgImg])
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
-      <Header className="global-header" isRootPath={isRootPath} title={title} />
+      <Header className="global-header" isRootPath={isRootPath} title={title}/>
       <main>
         <div className="global-main" style={{position:'relative'}}>
           <Center flexDirection={'column'}>
           {children}
           </Center>
-          {bgImage &&<Image style={{position:'fixed',
-            top:'5%',
-            opacity: '0%',
-            height:"95vh",
-            width:"100vw",
-            zIndex:-1}}
-            
-           src={bgImage} alt='bgImage' loading="lazy"/>}
+          <img style={bgStyled}
+          transitionTime={1.0}
+           src={bgImg} alt='bgImage' loading="lazy"/>
+           
         </div>
       </main>
     </div>
