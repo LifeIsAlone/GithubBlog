@@ -31,7 +31,7 @@ export default function TagSelector({handleCategories}) {
     // console.log(distinct, group, totalCount, Tags);
   return (
     <>
-    <Heading as={'h2'}>총 {totalCount}개의 포스트가 있습니다.🖋</Heading>
+    <Heading as={'h2'} pt={2}>총 {totalCount}개의 포스트가 있습니다.🖋</Heading>
     <HStack w={'lg'} flexWrap={'wrap'} py={4}>
         {Tags.map(tag=><Button
          key={tag[0]}
@@ -46,7 +46,7 @@ export default function TagSelector({handleCategories}) {
 
     {scrollActive&&
     <Fade in={scrollActive}>
-       <HStack w={'2xl'} flexWrap={'wrap'} py={4} pos="fixed" top={1}>
+       <HStack w={'2xl'} flexWrap={'wrap'} py={4} pos="fixed" top={1} bg={'whiteAlpha.100'}>
           {Tags.map(tag=><Button
           key={tag[0]}
           borderRadius={10}

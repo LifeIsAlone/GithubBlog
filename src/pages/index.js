@@ -8,6 +8,7 @@ import catGIF from "../images/cat.gif"
 import mainImg from "../images/main.jpg";
 
 import { Box, Center, Heading,Text } from "@chakra-ui/react"
+import { StaticImage } from "gatsby-plugin-image"
 const Index = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
 
@@ -20,18 +21,19 @@ const Index = ({ data, location }) => {
 
             <Center pos={'fixed'}
               p={5}
-              w={'lg'} 
+              w={'md'} 
               h={'md'} 
               bg={'whiteAlpha.600'} 
-              rounded='lg'
+              roundedTop='2xl'
               left={'50%'} 
               top={'50%'} 
               zIndex={3} 
               transform={'translate(-50%, -50%)'}
-              shadow='.2rem .2rem 3px gray'
+              shadow='.1rem .1rem 4px black'
               justifyContent={'center'}
               flexDirection={'column'}
               >
+              <Heading>🐱‍👤</Heading>
               <Heading>Park Award</Heading>
               <Text fontSize={'2xl'} fontStyle={"italic"}>UX관련 기술을 공부하는 공간입니다.</Text>
               <img src={catGIF} style={{alignItems:'flex-end'}} width='300px'/>

@@ -8,6 +8,8 @@ import Seo from "../components/seo"
 import CategoriesSelector from "../components/CategoriesSelector"
 import Posts from "../components/posts"
 
+import bgImage from "../images/mainPost.png";
+
 const BlogIndex = ({ data, location }) => {
   const [category ,setCategory] = useState('ALL');
 
@@ -20,10 +22,10 @@ const BlogIndex = ({ data, location }) => {
     console.log(e.target);
     setCategory(e.target.value);
   }
-
+  console.log('blg',bgImage);
   if (posts.length === 0) {
     return (
-      <Layout location={location} title={siteTitle}>
+      <Layout location={location} title={siteTitle} bgImg={bgImage}>
         <Seo title="All posts" />
         <Bio />
         <p>
@@ -36,7 +38,7 @@ const BlogIndex = ({ data, location }) => {
   }
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={siteTitle} bgImg={bgImage}>
       <Seo title="All posts" />
       <header>
         <CategoriesSelector handleCategories={handleCategories}/>

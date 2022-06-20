@@ -10,7 +10,6 @@ const Layout = ({ location, title, bgImg, children }) => {
   const [bgImage, setBgImage] = useState(undefined);
 
   useEffect(()=>{
-    console.log(bgImg);
     setBgImage(bgImg);
   },[bgImg])
   return (
@@ -23,11 +22,12 @@ const Layout = ({ location, title, bgImg, children }) => {
           </Center>
           {bgImage &&<Image style={{position:'fixed',
             top:'5%',
-            left:'0%',
+            opacity: '0%',
             height:"95vh",
             width:"100vw",
             zIndex:-1}}
-           src={bgImage} alt='bgImage'/>}
+            
+           src={bgImage} alt='bgImage' loading="lazy"/>}
         </div>
       </main>
     </div>
