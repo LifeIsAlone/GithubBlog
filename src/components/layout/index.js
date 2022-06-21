@@ -2,7 +2,6 @@ import React from "react"
 import Header from "./Header"
 import Footer from "./Footer"
 import { Center} from "@chakra-ui/react"
-import SmoothImage from 'react-smooth-image';
 
 const bgStyled = {position:'fixed',
   top:'5%',
